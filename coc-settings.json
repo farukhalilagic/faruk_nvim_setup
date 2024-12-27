@@ -8,6 +8,7 @@
         "python.jediMemoryLimit": 4092,
         "python.linting.pylintEnabled": false,
         "python.linting.flake8Enabled": true,
+
         "languageserver": {
                 "hdlcc": {
                         "command": "hdl --lsp",
@@ -52,5 +53,6 @@
                                 "context"
                         ]
                 }
-        }
+        },
+        "suggest.autoTrigger": "none"
 }
