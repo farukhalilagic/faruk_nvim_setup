@@ -8,6 +8,7 @@
         "python.jediMemoryLimit": 4092,
         "python.linting.pylintEnabled": false,
         "python.linting.flake8Enabled": true,
+        "inlayHint.enable": false,
 
         "languageserver": {
                 "hdlcc": {
@@ -53,6 +54,5 @@
                                 "context"
                         ]
                 }
-        },
-        "suggest.autoTrigger": "none"
+        }
 }
