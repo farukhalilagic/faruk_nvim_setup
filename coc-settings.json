@@ -53,6 +53,20 @@
                                 "plaintex",
                                 "context"
                         ]
-                }
+                },
+                        "pyls": {
+            "command": "pyls",
+            "filetypes": [
+                "python"
+            ],
+            "rootPatterns": [
+                ".git"
+            ],
+            "settings": {
+                "pyls.plugins.pyflakes.enabled": true,
+                "pyls.plugins.pylint.enabled": false,
+                "pyls.plugins.flake8.enabled": true
+            }
         }
+        },
 }

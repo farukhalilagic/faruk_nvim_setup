@@ -58,3 +58,20 @@ vim.api.nvim_create_autocmd("BufEnter", {
   end,
 })
 
+
+
+vim.keymap.set("v", "<F7>", function()
+  -- Get the visually selected text
+  vim.cmd('noau normal! "vy"')  
+  local s = vim.fn.getreg("v")  
+
+  vim.fn.inputsave()
+  local replace = vim.fn.input("Replace with: ")
+  vim.fn.inputrestore()
+
+  if replace ~= "" then
+    -- Escape special characters and perform a whole-word substitution
+    local pattern = "\\V\\<" .. vim.fn.escape(s, "/\\") .. "\\>"
+    vim.cmd(string.format("%%s/%s/%s/g", pattern, replace))
+  end
+end, { noremap = true, silent = true })
