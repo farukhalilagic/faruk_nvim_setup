@@ -54,19 +54,18 @@
                                 "context"
                         ]
                 },
-                        "pyls": {
-            "command": "pyls",
-            "filetypes": [
-                "python"
-            ],
-            "rootPatterns": [
-                ".git"
-            ],
-            "settings": {
-                "pyls.plugins.pyflakes.enabled": true,
-                "pyls.plugins.pylint.enabled": false,
-                "pyls.plugins.flake8.enabled": true
-            }
+                "python": {
+        "command": "pyright-langserver",
+        "args": ["--stdio"],
+        "filetypes": ["python"],
+        "rootPatterns": [
+                ".git",
+                "pyproject.toml",
+                "setup.py",
+                "setup.cfg",
+                "requirements.txt"
+        ],
+        "initializationOptions": {}
+}
         }
-        },
 }
